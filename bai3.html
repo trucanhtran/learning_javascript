@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getData() {
+        var a = document.getElementById("input").value;
+        document.getElementById("output").value = a;
+      }
+      function upperCase() {
+        var a = document.getElementById("input").value;
+        document.getElementById("output").value = a.toUpperCase();
+      }
+      function lowerCase() {
+        var a = document.getElementById("input").value;
+        document.getElementById("output").value = a.toLowerCase();
+      }
+      function count() {
+        var a = document.getElementById("input").value;
+        document.getElementById("output").value = a.length;
+      }
+      function countUpper() {
+        var a = document.getElementById("input").value;
+        var i;
+        for (i > 0; i < a.length; i++) {
+          i += i;
+        }
+        console.log(i);
+        document.getElementById("output").value = i;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td colspan="2">Sử dụng các hàm xử lý chuỗi</td>
+      </tr>
+      <tr>
+        <td>
+          <fieldset>
+            <legend>Nhập dữ liệu</legend>
+            <textarea name="" id="input" cols="30" rows="10"></textarea>
+          </fieldset>
+        </td>
+        <td>
+          <fieldset>
+            <legend>Kết quả</legend>
+            <textarea name="" id="output" cols="30" rows="10"></textarea>
+          </fieldset>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="getData()">Nhập dữ liệu</button>
+        </td>
+        <td><button onclick="countUpper()">Đếm ký tự hoa</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="upperCase()">In chữ Hoa</button></td>
+        <td>In mỗi từ trên mỗi dòng</td>
+      </tr>
+      <tr>
+        <td><button onclick="lowerCase()">In chữ thường</button></td>
+        <td>
+          <button onclick="count()">Đếm số từ</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Đếm số ký tự thường</td>
+        <td>In Nguyên Âm, Phụ Âm</td>
+      </tr>
+      <tr>
+        <td colspan="2">Xem website xử lý chuỗi w3c</td>
+      </tr>
+    </table>
+    <script>
+      function demSo() {
+        input = document.getElementById("input").value;
+        var demSo = input.length;
+        document.getElementById("output").value = demSo;
+      }
+    </script>
+  </body>
+</html>
