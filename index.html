@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count capitalize</title>
+  </head>
+  <body>
+    <script>
+      // function calculate total capitalize character in string
+      // input: a string
+      // output: number of capitalize character in string
+      function countCapitalizeString(text) {
+        return text.replace(/[^A-Z]/g, "").length;
+      }
+
+      var totalCapitalize = countCapitalizeString("AbcAbcAbc");
+      console.log(totalCapitalize);
+    </script>
+  </body>
+</html>
