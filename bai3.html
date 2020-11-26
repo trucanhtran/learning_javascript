@@ -23,14 +23,27 @@
       }
       function countUpper() {
         var a = document.getElementById("input").value;
-        var i;
-        for (i > 0; i < a.length; i++) {
-          i += i;
+        function countCapitalizeString(a) {
+          return a.replace(/[^A-Z]/g, "").length;
         }
-        console.log(i);
-        document.getElementById("output").value = i;
+        var totalCapitalize = countCapitalizeString(a);
+        document.getElementById("output").value = totalCapitalize;
+      }
+      function countLower() {
+        var a = document.getElementById("input").value;
+        function countNonCapitalizeString(a) {
+          return a.replace(/[^a-z]/g, "").length;
+        }
+        var totalNonCapitalize = countNonCapitalizeString(a);
+        document.getElementById("output").value = totalNonCapitalize;
       }
     </script>
+    <style>
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
   </head>
   <body>
     <table>
@@ -59,7 +72,7 @@
       </tr>
       <tr>
         <td><button onclick="upperCase()">In chữ Hoa</button></td>
-        <td>In mỗi từ trên mỗi dòng</td>
+        <td><button>In mỗi từ trên mỗi dòng</button></td>
       </tr>
       <tr>
         <td><button onclick="lowerCase()">In chữ thường</button></td>
@@ -68,11 +81,20 @@
         </td>
       </tr>
       <tr>
-        <td>Đếm số ký tự thường</td>
-        <td>In Nguyên Âm, Phụ Âm</td>
+        <td><button onclick="countLower()">Đếm số ký tự thường</button></td>
+        <td><button>In Nguyên Âm, Phụ Âm</button></td>
       </tr>
       <tr>
-        <td colspan="2">Xem website xử lý chuỗi w3c</td>
+        <td colspan="2">
+          <button>
+            <a
+              href="https://www.w3schools.com/js/js_loop_for.asp"
+              target="blank"
+            >
+              Xem website xử lý chuỗi w3c</a
+            >
+          </button>
+        </td>
       </tr>
     </table>
     <script>
