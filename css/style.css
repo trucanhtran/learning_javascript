@@ -1,0 +1,41 @@
+.item {
+  width: 100px;
+}
+.ratings {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease;
+  color: #ebebeb;
+}
+
+.star:before {
+  content: "\2605";
+  width: 60px;
+  height: 60px;
+  font-size: 10px;
+}
+
+.star:hover,
+.star.selected,
+.star:hover ~ .star,
+.star.selected ~ .star {
+  transition: color 0.8s ease;
+  color: black;
+}
+
+.item-images {
+  position: relative;
+}
+
+.item-star {
+  position: absolute;
+  top: -2px;
+  left: 4px;
+}
